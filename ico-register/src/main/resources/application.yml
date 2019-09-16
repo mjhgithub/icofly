@@ -1,0 +1,40 @@
+logging:
+  level:
+    com:
+      mark: INFO
+#  config: ./config/logback-spring.xml
+
+server:
+  port: 8000
+  tomcat:
+    uri-encoding: UTF-8
+
+#actuator health check
+management:
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  application:
+    name: ico-register
+
+info:
+  app:
+    name: ico-register
+    version: 0.0.1
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${ico-register:127.0.0.1}:${server.port}/eureka/
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 5000

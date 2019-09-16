@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ico-api/ico-api.iml" filepath="$PROJECT_DIR$/ico-api/ico-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ico-core/ico-core.iml" filepath="$PROJECT_DIR$/ico-core/ico-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ico-dispatcher/ico-dispatcher.iml" filepath="$PROJECT_DIR$/ico-dispatcher/ico-dispatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ico-driver/ico-driver.iml" filepath="$PROJECT_DIR$/ico-driver/ico-driver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ico-passenger/ico-passenger.iml" filepath="$PROJECT_DIR$/ico-passenger/ico-passenger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ico-register/ico-register.iml" filepath="$PROJECT_DIR$/ico-register/ico-register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ico-trip/ico-trip.iml" filepath="$PROJECT_DIR$/ico-trip/ico-trip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/icofly.iml" filepath="$PROJECT_DIR$/icofly.iml" />
+    </modules>
+  </component>
+</project>

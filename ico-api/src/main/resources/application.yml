@@ -1,0 +1,67 @@
+logging:
+  level:
+    com:
+      mark: INFO
+#  config: ./config/logback-spring.xml
+
+server:
+  port: 8001
+  tomcat:
+    uri-encoding: UTF-8
+
+#actuator health check
+management:
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  application:
+    name: ico-api
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lowerCaseServiceId: true
+      routes:
+      - id: ico-trip
+        uri: lb://ICO-TRIP
+        predicates:
+          - Path=/api/trip/**
+        filters:
+#          - StripPrefix=2
+      - id: ico-dispatcher
+        uri: lb://ICO-DISPATCHER
+        predicates:
+          - Path=/api/dispatcher/**
+        filters:
+#          - StripPrefix=2
+      - id: ico-passenger
+        uri: lb://ICO-PASSENGER
+        predicates:
+          - Path=/api/passenger/**
+        filters:
+#          - StripPrefix=2
+      - id: ico-driver
+        uri: lb://ICO-DRIVER
+        predicates:
+          - Path=/api/driver/**
+        filters:
+#          - StripPrefix=2
+
+
+info:
+  app:
+    name: ico-api
+    version: 0.0.1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${ico-register:127.0.0.1}:8000/eureka/

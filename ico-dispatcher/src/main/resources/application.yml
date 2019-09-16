@@ -1,0 +1,35 @@
+logging:
+  level:
+    com:
+      mark: INFO
+#  config: ./config/logback-spring.xml
+
+server:
+  port: 8003
+  tomcat:
+    uri-encoding: UTF-8
+
+#actuator health check
+management:
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+spring:
+  application:
+    name: ico-dispatcher
+
+info:
+  app:
+    name: ico-dispatcher
+    version: 0.0.1
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${ico-register:127.0.0.1}:8000/eureka/

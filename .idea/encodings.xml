@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ico-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ico-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ico-dispatcher" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ico-driver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ico-order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ico-passenger" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ico-register" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ico-trip" charset="UTF-8" />
+  </component>
+</project>
