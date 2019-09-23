@@ -2,6 +2,7 @@ package com.mark.icohome.icocore.utils;
 
 
 import com.mark.icohome.icocore.base.BaseResult;
+import com.mark.icohome.icocore.exception.ErrorCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -18,38 +19,38 @@ public class ResultUtils {
 
     public static final String SUCCESS_MSG = "操作成功";
 
-    public static <T> BaseResult<T> genResult(boolean success, int code, String message, T data) {
-
+    public static <T> BaseResult<T> result(boolean success, int code, String msg, T data) {
         BaseResult<T> result = new BaseResult();
-
         result.setSuccess(success);
         result.setCode(code);
-        result.setMessage(message);
+        result.setMessage(msg);
         result.setData(data);
         result.setTimestamp(System.currentTimeMillis());
-
-        if (log.isDebugEnabled()) {
-            log.debug("generate result:{}", result);
-        }
-
         return result;
     }
 
-    public static <T> BaseResult<T> genSuccesResult() {
-        return genResult(SUCCESS, SUCCESS_CODE, SUCCESS_MSG, null);
+    public static <T> BaseResult<T> success() {
+        return result(SUCCESS, SUCCESS_CODE, SUCCESS_MSG, null);
     }
 
-    public static <T> BaseResult<T> genSuccesResult(T data) {
-        return genResult(SUCCESS, SUCCESS_CODE, SUCCESS_MSG, data);
+    public static <T> BaseResult<T> success(T data) {
+        return result(SUCCESS, SUCCESS_CODE, SUCCESS_MSG, data);
     }
 
-    public static <T> BaseResult<T> genSuccesResult(String message, T data) {
-        return genResult(SUCCESS, SUCCESS_CODE, message, data);
+    public static <T> BaseResult<T> success(String msg, T data) {
+        return result(SUCCESS, SUCCESS_CODE, msg, data);
     }
 
-    public static <T> BaseResult<T> genErrorResult(String msg, int code) {
-        return genResult(ERROR, code, msg, null);
+    public static <T> BaseResult<T> error(ErrorCodeEnum errorCodeEnum) {
+        return result(ERROR, errorCodeEnum.getCode(), errorCodeEnum.getMsg(), null);
     }
 
+    public static <T> BaseResult<T> error(ErrorCodeEnum errorCodeEnum, String msg) {
+        return result(ERROR, errorCodeEnum.getCode(), msg, null);
+    }
+
+    public static <T> BaseResult<T> error(int code, String msg) {
+        return result(ERROR, code, msg, null);
+    }
 
 }
