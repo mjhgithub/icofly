@@ -15,7 +15,7 @@ public class IcoApiApplication {
 
     @RequestMapping("/health/check")
     public Mono healthCheck() {
-        return Mono.just(ResultUtils.genSuccesResult());
+        return Mono.just(ResultUtils.success());
     }
 
 }

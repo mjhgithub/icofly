@@ -17,6 +17,6 @@ public class IndexController {
 
     @RequestMapping("/index")
     public BaseResult<Object> index() {
-        return ResultUtils.genSuccesResult("dispatcher");
+        return ResultUtils.success("dispatcher");
     }
 }

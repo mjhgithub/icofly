@@ -7,6 +7,7 @@ package com.mark.icohome.icocore.exception;
 public enum ErrorCodeEnum {
 
     NOT_EXIST(4004, "数据不存在"),
+    ILLEGAL_PARAM(4005, "非法参数"),
     SERVICE_ERROR(5001, "服务异常");
 
     private int code;

@@ -18,7 +18,7 @@ public class HealthController {
 
     @RequestMapping("/check")
     public BaseResult<Object> healthCheck() {
-        return ResultUtils.genSuccesResult();
+        return ResultUtils.success();
     }
 
 }

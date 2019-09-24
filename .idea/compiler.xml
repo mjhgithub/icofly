@@ -13,18 +13,17 @@
         <module name="ico-passenger" />
         <module name="ico-register" />
         <module name="ico-trip" />
-        <module name="icofly" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ico-api" target="1.5" />
-      <module name="ico-core" target="1.5" />
-      <module name="ico-dispatcher" target="1.5" />
-      <module name="ico-driver" target="1.5" />
-      <module name="ico-passenger" target="1.5" />
-      <module name="ico-register" target="1.5" />
-      <module name="ico-trip" target="1.5" />
-      <module name="icofly" target="1.5" />
+      <module name="ico-api" target="1.8" />
+      <module name="ico-core" target="1.8" />
+      <module name="ico-dispatcher" target="1.8" />
+      <module name="ico-driver" target="1.8" />
+      <module name="ico-passenger" target="1.8" />
+      <module name="ico-register" target="1.8" />
+      <module name="ico-trip" target="1.8" />
+      <module name="icofly" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
